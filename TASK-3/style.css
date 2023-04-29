@@ -1,0 +1,207 @@
+:root {
+	--darkest: #000000;
+	--grey: #6B7280;
+	--pink: hsl(0, 2%, 13%);
+	--purple: #8B5CF6;
+	--light: #EEE;
+	--yellow: rgb(117, 255, 5);
+	--red: rgb(255, 21, 21);
+}
+body {
+    background: linear-gradient( 0deg, hsl(313, 88%, 51%) 0%, hsla(76, 100%, 54%, 0.914) 100%);
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+h1 {text-align: center;}
+h2{text-align:left}
+* {
+	margin: 0;
+	box-sizing:calc();
+}
+
+body {
+	display:block;
+	flex-direction: column;
+	min-height: 100vh;
+	color: rgb(0, 0, 0);
+	/* background-image: url(td.jpg); */
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+.wrapper.two {
+    background-color: #29e614;
+    font-size: 10rem;
+    font-family: "Play", sans-serif;
+}
+.neon h3 {
+    margin: 1rem auto;
+    animation: neon 1s ease infinite;
+    text-align: center;
+    font-size: 35px;
+}
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px hsla(242, 91%, 45%, 0.659), 0 0 20px #3c12e6e2, 0 0 20px hsla(243, 86%, 47%, 0.94), 0 0 20px hsla(254, 82%, 49%, 0.938), 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px hsla(128, 90%, 26%, 0.895), 0 0 5px hwb(142 5% 49% / 0.927), 0 0 5px hsl(116, 80%, 28%), 0 0 5px hsl(138, 87%, 26%), 0 0 2px hsla(255, 87%, 35%, 0.827), 4px 4px 2px #40340a;
+        color: #eda0d3;
+    }
+}
+
+header h1{ 
+	font-size: 3rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 1rem;
+	font-family:monospace;
+}
+
+#new-task-form {
+	display:flex;
+    border-radius: 20px;
+}
+
+input, button {
+	appearance:calc();
+	border:0cqmax;
+	outline:#010114;
+	background:0cap;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: rgb(255, 255, 255);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: hsla(256, 90%, 4%, 0.835);
+	border: 3px solid rgb(0, 0, 255);
+	font-size: 1.40rem;
+    font-family: cursive;
+
+}
+
+#new-task-input::placeholder {
+	color: black;
+    font-family: cursive;
+}
+
+#new-task-submit {
+	color:rgb(222, 36, 145);
+	font-size: 1.35rem;
+	font-weight: 700;
+	width: 4em;
+	background-color:hwb(161 5% 16% / 0.733);
+    border-radius: 20px;
+	border: 2px solid blue;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#new-task-submit:hover {
+	color:black;
+	border: 2px solid #f11717;
+	background-color: blue;
+	transform: scale(1.05);
+
+
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin:auto;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+.task-list h2 {
+	font-size: 2rem;
+	font-weight: 300;
+	color:hsl(320, 90%, 4%);
+	margin-bottom: 1rem;
+	font-family:fantasy;
+    
+}
+
+hr{
+	background-color:red;
+	height: 5px;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(55, 168, 233);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+    border: 2px solid yellow;
+
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: black;
+	font-family: cursive;
+	font-size: 1.3em;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: var(--pink);
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .X {
+	background-color: red;
+	color: white
+    
+}
+.task .actions .edit {
+	background: rgb(59, 228, 59);
+	color: white;
+	
+
